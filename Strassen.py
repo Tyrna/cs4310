@@ -1,3 +1,10 @@
+###
+# By: Oscar Vanderhorst
+# Date: 09/27/18
+# Purpose: Implementation for Strassen's algorithm on a static 4x4 matrix
+#   Does not include recursion for the sake of this assignment.
+###
+
 X = [[2,2,2,1],[5,8,3,2],[3,3,5,9],[1,3,4,2]]
 Y = [[5,4,2,1],[7,1,4,4],[4,8,6,3],[5,7,4,2]]
 
