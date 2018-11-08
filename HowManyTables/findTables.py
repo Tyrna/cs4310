@@ -1,3 +1,8 @@
+### HowManyTables for Algorithms CS4310
+### By: Oscar Vanderhorst
+### Using Python3
+
+
 def findTables(Lines):
 	#Instantiate array of number of people
 	#O(n) where n = amount of people
@@ -67,7 +72,7 @@ class table():
 
 # -----------------------------------------------------------------
 
-f = open("input.txt", "r+")
+f = open(input("Please provide the name of the input file. Example: input.txt\n"), "r+")
 
 numOfTest = int(f.readline())
 #Check that T is of range [1, 26]
