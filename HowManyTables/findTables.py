@@ -2,6 +2,7 @@
 ### By: Oscar Vanderhorst
 ### Using Python3
 
+import time
 
 def findTables(Lines):
 	#Instantiate array of number of people
@@ -46,10 +47,11 @@ def calculateTables(peopleInTables):
 			pass
 		else:
 			#O(1) Adding a key on a dictionary is constant
-			uniqueTables.update(table=1)
+			uniqueTables[table] = 1
 
 	#O(Un), where Un = amount of unique tables
-	print(len(uniqueTables) + soloTable)
+	o.write(str(len(uniqueTables) + soloTable) + "\n")
+	print("The number of tables are :", len(uniqueTables) + soloTable)
 
 class table():
 	def __init__(self, person):
@@ -73,6 +75,7 @@ class table():
 # -----------------------------------------------------------------
 
 f = open(input("Please provide the name of the input file. Example: input.txt\n"), "r+")
+o = open("output.txt", "w+")
 
 numOfTest = int(f.readline())
 #Check that T is of range [1, 26]
@@ -96,9 +99,15 @@ for line in f:
 			print("M must be of range: M >= 1000")
 			exit(1)
 	else:
+		print("When n = %d, m = %d" % (toSend[0], toSend[1]))
+		start_time = time.time()
 		arr = findTables(toSend)
 		calculateTables(arr)
+		print("Execution time: %s seconds\n" % (time.time() - start_time))
 		toSend = []
 
+print("When n = %d, m = %d :" % (toSend[0], toSend[1]))
+start_time = time.time()
 arr = findTables(toSend)
 calculateTables(arr)
+print("Execution time: %s seconds" % (time.time() - start_time))
