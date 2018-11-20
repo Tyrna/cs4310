@@ -125,8 +125,7 @@ class Graph(object):
 
 
 def main():
-    #f = open(input("Please provide the name of the input file. Example: input.txt\n"), "r+")
-    f = open("input.txt", "r+")
+    f = open(input("Please provide the name of the input file. Example: input.txt\n"), "r+")
     myGraph = Graph()
 
     #Get N (number of cities/vertices) and M (number of roads/edges)
@@ -148,10 +147,11 @@ def main():
     
     #print(myGraph._graph)
     result = myGraph.findSmoothestPath(endGoal[0], endGoal[1])
+    #print(myGraph._graph)
     if (result[0] == 30001):
         print("IMPOSSIBLE")
     else:
-        print(result[0], "/", result[1])
+        print(str(result[0]) + "/"  + str(result[1]))
 
 
 #If called not as a module

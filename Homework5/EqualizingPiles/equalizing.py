@@ -2,11 +2,11 @@
 ## By: Oscar Vanderhorst
 ## Using: Python3
 
-# -----------------------------------------------------------------
+# ---------------------------------------------------------------
+from functools import reduce
 
 def main():
-    #f = open(input("Please provide the name of the input file. Example: input.txt\n"), "r+")
-    f = open("input.txt", "r+")
+    f = open(input("Please provide the name of the input file. Example: input.txt\n"), "r+")
 
     #Get n; number of piles
     n = int(f.readline())
